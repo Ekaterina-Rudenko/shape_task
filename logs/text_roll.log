@@ -1,0 +1,12 @@
+2021-10-15 01:04:14 [main] ERROR InfoReader - Reading from data/info.txt was failed or interrupted
+java.nio.file.NoSuchFileException: data\info.txt
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at sun.nio.fs.WindowsFileSystemProvider.newFileChannel(WindowsFileSystemProvider.java:121) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:292) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:345) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4104) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4196) ~[?:?]
+	at InfoReader.readConesFromFile(InfoReader.java:20) [classes/:?]
+	at by.epam.task2.main.Main.main(Main.java:16) [classes/:?]
