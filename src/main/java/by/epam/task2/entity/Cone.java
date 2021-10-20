@@ -3,6 +3,7 @@ package by.epam.task2.entity;
 import by.epam.task2.generator.IdGenerator;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class Cone {
     private long coneId;
@@ -56,8 +57,8 @@ public class Cone {
         Cone cone = (Cone) o;
         return coneId == cone.coneId
                 && Double.compare(cone.radius, radius) == 0
-                && Objects.equals(centerPoint, cone.centerPoint)
-                && Objects.equals(apexPoint, cone.apexPoint);
+                && centerPoint.equals(cone.centerPoint)
+                && apexPoint.equals(cone.apexPoint);
     }
 
     @Override
@@ -67,12 +68,13 @@ public class Cone {
 
     @Override
     public String toString() {
-        return "Cone{" +
-                "coneID=" + coneId +
-                ", centerPoint=" + centerPoint +
-                ", apexPoint=" + apexPoint +
-                ", radius=" + radius +
-                '}';
+        final StringBuilder sb = new StringBuilder("Cone{");
+        sb.append("coneId=").append(coneId);
+        sb.append(", centerPoint=").append(centerPoint);
+        sb.append(", apexPoint=").append(apexPoint);
+        sb.append(", radius=").append(radius);
+        sb.append('}');
+        return sb.toString();
     }
 }
 
