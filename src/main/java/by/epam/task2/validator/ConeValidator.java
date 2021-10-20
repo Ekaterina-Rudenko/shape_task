@@ -13,10 +13,15 @@ public interface ConeValidator {
     int INDEX_APEX_Y = 4;
     int INDEX_APEX_Z = 5;
     int INDEX_RADIUS = 6;
+
     boolean checkConeString(String coneDataLine);
+
     boolean isCone(double... parameter);
+
     boolean isCone(Cone cone);
+
     boolean isCone(Point centre, Point apex, double radius);
+
     boolean checkDissectionHeight(Cone cone, double height);
 
 }
