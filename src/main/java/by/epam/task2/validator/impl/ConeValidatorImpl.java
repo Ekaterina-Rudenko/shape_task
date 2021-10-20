@@ -34,7 +34,7 @@ public class ConeValidatorImpl implements ConeValidator {
 
     @Override
     public boolean isConeParameter(Cone cone) {
-        Point centre = cone.getCenterPoint();
+        Point centre = cone.getCentrePoint();
         Point apex = cone.getApexPoint();
         double radius = cone.getRadius();
         return checkParameter(centre, apex, radius);
@@ -55,7 +55,7 @@ public class ConeValidatorImpl implements ConeValidator {
     }
 
     public boolean checkDissectionHeight(Cone cone, double height) {
-        boolean isValidHeight = (height >= cone.getCenterPoint().getZ()
+        boolean isValidHeight = (height >= cone.getCentrePoint().getZ()
                 && height <= cone.getApexPoint().getZ());
         return isValidHeight;
     }
