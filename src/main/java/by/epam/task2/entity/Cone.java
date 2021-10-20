@@ -1,11 +1,13 @@
 package by.epam.task2.entity;
 
+import by.epam.task2.exception.CustomException;
 import by.epam.task2.generator.IdGenerator;
-
-import java.util.Objects;
-import java.util.StringJoiner;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Cone {
+    static Logger logger = LogManager.getLogger();
     private long coneId;
     private Point centerPoint;
     private Point apexPoint;
@@ -30,7 +32,10 @@ public class Cone {
         return centerPoint;
     }
 
-    public void setCenterPoint(Point centerPoint) {
+    public void setCenterPoint(Point centerPoint) throws CustomException {
+        if (centerPoint == null) {
+            throw new CustomException("Can't set null point");
+        }
         this.centerPoint = centerPoint;
     }
 
@@ -38,7 +43,10 @@ public class Cone {
         return apexPoint;
     }
 
-    public void setApexPoint(Point apexPoint) {
+    public void setApexPoint(Point apexPoint) throws CustomException {
+        if (apexPoint == null) {
+            throw new CustomException("Can't set null point");
+        }
         this.apexPoint = apexPoint;
     }
 
@@ -46,14 +54,22 @@ public class Cone {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(double radius) throws CustomException {
+        if (radius < 0) {
+            logger.log(Level.ERROR, "The radius " + radius + "can't be set, radius must be positive value");
+            throw new CustomException("The radius " + radius + " can't be set");
+        }
         this.radius = radius;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Cone cone = (Cone) o;
         return coneId == cone.coneId
                 && Double.compare(cone.radius, radius) == 0
@@ -63,7 +79,9 @@ public class Cone {
 
     @Override
     public int hashCode() {
-        return Objects.hash(coneId, centerPoint, apexPoint, radius);
+        int result = centerPoint != null ? centerPoint.hashCode() : 0;
+        result = 31 * result;
+        return result;
     }
 
     @Override
