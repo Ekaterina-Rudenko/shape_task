@@ -2,6 +2,7 @@ package by.epam.task2.service.impl;
 
 import by.epam.task2.entity.Cone;
 import by.epam.task2.exception.CustomException;
+import by.epam.task2.service.ConeCalculation;
 import by.epam.task2.validator.ConeValidator;
 import by.epam.task2.validator.impl.ConeValidatorImpl;
 import org.apache.logging.log4j.Level;
@@ -9,9 +10,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class ConeCalculationImpl {
+public class ConeCalculationImpl implements ConeCalculation {
     static Logger logger = LogManager.getLogger();
 
+    @Override
     public double findSurfaceArea(Cone cone) {
         double radius = cone.getRadius();
         double height = findHeight(cone);
@@ -20,6 +22,7 @@ public class ConeCalculationImpl {
         return surfaceArea;
     }
 
+    @Override
     public double findVolume(Cone cone) {
         double radius = cone.getRadius();
         double height = findHeight(cone);
@@ -27,6 +30,7 @@ public class ConeCalculationImpl {
         return volume;
     }
 
+    @Override
     public double dissectionVolumeRatio(Cone cone, double dissectionHeight) throws CustomException {
         ConeValidator validator = ConeValidatorImpl.getInstance();
         if (!validator.checkDissectionHeight(cone, dissectionHeight)) {
@@ -42,14 +46,15 @@ public class ConeCalculationImpl {
         return volumeRatio;
     }
 
+    @Override
     public boolean isBaseOnPlane(Cone cone) {
-        boolean onPlane = (cone.getCenterPoint().getX() == 0 && cone.getCenterPoint().getY() == 0);
+        boolean onPlane = (cone.getCentrePoint().getX() == 0 && cone.getCentrePoint().getY() == 0);
         logger.log(Level.INFO, "The cone base is on the coordinates plane - " + onPlane);
         return onPlane;
     }
 
     private double findHeight(Cone cone) {
-        double height = Math.abs(cone.getApexPoint().getZ() - cone.getCenterPoint().getZ());
+        double height = Math.abs(cone.getApexPoint().getZ() - cone.getCentrePoint().getZ());
         return height;
     }
 
