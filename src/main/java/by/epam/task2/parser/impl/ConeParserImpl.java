@@ -47,7 +47,7 @@ public class ConeParserImpl implements ConeParser {
                         .toArray())
                 .toList();
         if (parameterArrayList.isEmpty()) {
-            logger.log(Level.ERROR, "No valid data to parse");//TO... DO
+            logger.log(Level.ERROR, "No valid data to parse");
             throw new CustomException("There is no valid lines to parse");
         }
         return parameterArrayList;
