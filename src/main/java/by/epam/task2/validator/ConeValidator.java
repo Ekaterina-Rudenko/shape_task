@@ -23,4 +23,5 @@ public interface ConeValidator {
     boolean isConeParameter(Point centre, Point apex, double radius);
 
     boolean checkDissectionHeight(Cone cone, double height);
+
 }
