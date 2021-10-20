@@ -9,13 +9,13 @@ import org.apache.logging.log4j.Logger;
 public class Cone {
     static Logger logger = LogManager.getLogger();
     private long coneId;
-    private Point centerPoint;
+    private Point centrePoint;
     private Point apexPoint;
     private double radius;
 
     public Cone(Point centerPoint, Point apexPoint, double radius) {
         this.coneId = IdGenerator.generateId();
-        this.centerPoint = centerPoint;
+        this.centrePoint = centerPoint;
         this.apexPoint = apexPoint;
         this.radius = radius;
     }
@@ -28,15 +28,15 @@ public class Cone {
         this.coneId = coneID;
     }
 
-    public Point getCenterPoint() {
-        return centerPoint;
+    public Point getCentrePoint() {
+        return centrePoint;
     }
 
-    public void setCenterPoint(Point centerPoint) throws CustomException {
-        if (centerPoint == null) {
+    public void setCentrePoint(Point centrePoint) throws CustomException {
+        if (centrePoint == null) {
             throw new CustomException("Can't set null point");
         }
-        this.centerPoint = centerPoint;
+        this.centrePoint = centrePoint;
     }
 
     public Point getApexPoint() {
@@ -73,14 +73,16 @@ public class Cone {
         Cone cone = (Cone) o;
         return coneId == cone.coneId
                 && Double.compare(cone.radius, radius) == 0
-                && centerPoint.equals(cone.centerPoint)
+                && centrePoint.equals(cone.centrePoint)
                 && apexPoint.equals(cone.apexPoint);
     }
 
     @Override
     public int hashCode() {
-        int result = centerPoint != null ? centerPoint.hashCode() : 0;
-        result = 31 * result;
+        int prime = 13;
+        int result = centrePoint != null ? centrePoint.hashCode() : 0;
+        result = prime * result + apexPoint.hashCode();
+        result = prime * result + Double.hashCode(radius);
         return result;
     }
 
@@ -88,7 +90,7 @@ public class Cone {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Cone{");
         sb.append("coneId=").append(coneId);
-        sb.append(", centerPoint=").append(centerPoint);
+        sb.append(", centerPoint=").append(centrePoint);
         sb.append(", apexPoint=").append(apexPoint);
         sb.append(", radius=").append(radius);
         sb.append('}');
