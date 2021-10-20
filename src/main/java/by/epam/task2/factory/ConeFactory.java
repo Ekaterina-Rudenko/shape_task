@@ -9,7 +9,9 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ConeFactory {
     static Logger logger = LogManager.getLogger();
@@ -49,5 +51,14 @@ public class ConeFactory {
         Point centre = pointFactory.createPoint(centreX, centreY, centreZ);
         Point apex = pointFactory.createPoint(apexX, apexY, apexZ);
         return new Cone(centre, apex, radius);
+    }
+
+    public List<Cone> createConeList(List<double[]> coneParameter) throws CustomException {
+       List<Cone> coneList = new ArrayList<>();
+       for(double[] array:coneParameter){
+           Cone cone = createCone(array);
+           coneList.add(cone);
+       }
+    return coneList;
     }
 }
