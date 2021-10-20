@@ -16,12 +16,11 @@ public interface ConeValidator {
 
     boolean checkConeString(String coneDataLine);
 
-    boolean isCone(double... parameter);
+    boolean isConeParameter(double... parameter);
 
-    boolean isCone(Cone cone);
+    boolean isConeParameter(Cone cone);
 
-    boolean isCone(Point centre, Point apex, double radius);
+    boolean isConeParameter(Point centre, Point apex, double radius);
 
     boolean checkDissectionHeight(Cone cone, double height);
-
 }
