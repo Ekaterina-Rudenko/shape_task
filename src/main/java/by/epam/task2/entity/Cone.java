@@ -32,7 +32,7 @@ public class Cone implements Observable {
         return coneId;
     }
 
-    public void setConeID(long coneId) {
+    public void setConeID(long coneId) throws CustomException {
         this.coneId = coneId;
         notifyObservers();
     }
