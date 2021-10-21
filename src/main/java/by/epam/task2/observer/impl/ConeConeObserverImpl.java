@@ -35,7 +35,7 @@ public class ConeConeObserverImpl implements ConeObserver {
     }
 
     @Override
-    public void updateVolume(ConeEvent coneEvent) throws CustomException {
+    public void updateVolume(ConeEvent coneEvent){
         Cone cone = coneEvent.getSource();
         ConeCalculation coneCalculation = new ConeCalculationImpl();
         Warehouse warehouse = Warehouse.getInstance();
