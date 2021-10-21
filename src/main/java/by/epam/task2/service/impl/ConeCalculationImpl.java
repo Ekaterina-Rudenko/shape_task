@@ -58,7 +58,7 @@ public class ConeCalculationImpl implements ConeCalculation {
     }
 
     @Override
-    public double averageSurfaceArea() throws CustomException {
+    public double averageSurfaceArea() {
         Repository repository = Repository.getInstance();
         Warehouse warehouse = Warehouse.getInstance();
         double totalSurface = 0;
@@ -66,8 +66,7 @@ public class ConeCalculationImpl implements ConeCalculation {
         for (Cone c : cones) {
             totalSurface += warehouse.getCone(c.getConeId()).getSurfaceArea();
         }
-        double averageSurface = totalSurface / cones.size();
-        return averageSurface;
+        return totalSurface / cones.size();
     }
 
     private double findHeight(Cone cone) {
@@ -76,6 +75,6 @@ public class ConeCalculationImpl implements ConeCalculation {
     }
 
     private double coneVolume(double radius, double height) {
-        return (1 / 3 * Math.PI * Math.pow(radius, 2) * height);
+        return ((double) 1 / 3 * Math.PI * Math.pow(radius, 2) * height);
     }
 }
