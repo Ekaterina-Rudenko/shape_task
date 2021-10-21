@@ -12,8 +12,8 @@ public class SurfaceAreaComparator implements Comparator<Cone> {
         double surfaceArea1 = 0;
         double surfaceArea2 = 0;
         try {
-            surfaceArea1 = warehouse.getParameter(cone1.getConeId()).getSurfaceArea();
-            surfaceArea2 = warehouse.getParameter(cone2.getConeId()).getSurfaceArea();
+            surfaceArea1 = warehouse.getCone(cone1.getConeId()).getSurfaceArea();
+            surfaceArea2 = warehouse.getCone(cone2.getConeId()).getSurfaceArea();
         } catch (CustomException e) {
             e.printStackTrace();
         }
