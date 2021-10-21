@@ -22,18 +22,8 @@ public class Warehouse {
     private Warehouse(){
         this.coneMap = new HashMap<>();
     }
-    public ConeParameter getCone(long coneId) throws CustomException{
-        if(!coneMap.containsKey(coneId)){
-            logger.log(Level.ERROR, "Warehouse doesn't contain cone with id " + coneId);
-            throw new CustomException("Warehouse doesn't contain cone with id " + coneId);
-        }
+    public ConeParameter getCone(long coneId){
         return coneMap.get(coneId);
-    }
-    public void putParameter(long coneId, double surfaceArea, double volume){
-        ConeParameter coneParameter = new ConeParameter();
-        coneParameter.setSurfaceArea(surfaceArea);
-        coneParameter.setVolume(volume);
-        coneMap.put(coneId, coneParameter);
     }
     public void putParameter(long coneId, ConeParameter value){
         coneMap.put(coneId, value);
@@ -42,6 +32,12 @@ public class Warehouse {
     public void removeParameter(long coneId){
         coneMap.remove(coneId);
         logger.log(Level.INFO, " Cone " + coneId + " was removed");
+    }
+    public void putParameter(long coneId, double surfaceArea, double volume){
+        ConeParameter coneParameter = new ConeParameter();
+        coneParameter.setSurfaceArea(surfaceArea);
+        coneParameter.setVolume(volume);
+        coneMap.put(coneId, coneParameter);
     }
 
 }
