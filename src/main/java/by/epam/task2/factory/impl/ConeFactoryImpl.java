@@ -41,7 +41,7 @@ public class ConeFactoryImpl implements ConeFactory {
     public Cone createCone(Point centre, Point apex, double radius) throws CustomException {
         if (!validator.isCone(centre, apex, radius)) {
             logger.log(Level.ERROR, "The parameters " + centre.toString() + ", " + apex.toString() + ", " + radius + " for creating a cone are incorrect ");
-            throw new CustomException("The parameters " + centre.toString() + ", " + apex.toString() + ", " + radius + " for creating a cone are incorrect ");
+            throw new CustomException("The parameters " + centre + ", " + apex.toString() + ", " + radius + " for creating a cone are incorrect ");
         }
         return new Cone(centre, apex, radius);
     }
