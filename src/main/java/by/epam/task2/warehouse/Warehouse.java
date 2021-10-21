@@ -43,14 +43,5 @@ public class Warehouse {
         coneMap.remove(coneId);
         logger.log(Level.INFO, " Cone " + coneId + " was removed");
     }
-    public void updateParameter(long coneId, double surfaceArea, double volume) throws CustomException {
-        ConeParameter coneParameter = coneMap.get(coneId);
-        if(coneParameter == null){
-            logger.log(Level.ERROR, "No cone with id " + coneId);
-            throw new CustomException("No cone with id " + coneId);
-        }
-        coneParameter.setSurfaceArea(surfaceArea);
-        coneParameter.setVolume(volume);
-    }
 
 }
