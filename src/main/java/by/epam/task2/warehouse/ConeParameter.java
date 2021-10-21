@@ -5,6 +5,7 @@ import java.util.StringJoiner;
 public class ConeParameter {
     private double surfaceArea;
     private double volume;
+    public ConeParameter(){}
     public ConeParameter(double surfaceArea, double volume){
         this.surfaceArea = surfaceArea;
         this.volume = volume;
