@@ -8,7 +8,7 @@ import java.util.Comparator;
 
 public class VolumeComparator implements Comparator<Cone> {
     @Override
-    public int compare(Cone cone1, Cone cone2){
+    public int compare(Cone cone1, Cone cone2) {
         ConeCalculation calculation = new ConeCalculationImpl();
         double volume1 = calculation.findVolume(cone1);
         double volume2 = calculation.findVolume(cone2);
