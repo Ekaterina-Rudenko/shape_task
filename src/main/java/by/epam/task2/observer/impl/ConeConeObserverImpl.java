@@ -28,7 +28,7 @@ public class ConeConeObserverImpl implements ConeObserver {
         ConeCalculation coneCalculation = new ConeCalculationImpl();
         Warehouse warehouse = Warehouse.getInstance();
         long coneId = cone.getConeId();
-        ConeParameter coneParameter = warehouse.getParameter(coneId);
+        ConeParameter coneParameter = warehouse.getCone(coneId);
         double surfaceArea = coneCalculation.findSurfaceArea(cone);
         coneParameter.setSurfaceArea(surfaceArea);
         warehouse.putParameter(coneId, coneParameter);
@@ -40,7 +40,7 @@ public class ConeConeObserverImpl implements ConeObserver {
         ConeCalculation coneCalculation = new ConeCalculationImpl();
         Warehouse warehouse = Warehouse.getInstance();
         long coneId = cone.getConeId();
-        ConeParameter coneParameter = warehouse.getParameter(coneId);
+        ConeParameter coneParameter = warehouse.getCone(coneId);
         double volume = coneCalculation.findVolume(cone);
         coneParameter.setVolume(volume);
         warehouse.putParameter(coneId, coneParameter);
