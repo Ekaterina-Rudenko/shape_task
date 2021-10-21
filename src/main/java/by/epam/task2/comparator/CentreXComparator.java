@@ -8,7 +8,6 @@ public class CentreXComparator implements Comparator<Cone> {
     public int compare(Cone o1, Cone o2) {
         double x1 = o1.getCentrePoint().getX();
         double x2 = o2.getCentrePoint().getX();
-        int comp1 = Double.compare(x1, x2);
-        return comp1;
+        return Double.compare(x1, x2);
     }
 }
