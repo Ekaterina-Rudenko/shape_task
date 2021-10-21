@@ -30,6 +30,7 @@ public class Repository {
         return Optional.ofNullable(cone);
     }
 
+
     public void setCone(int index, Cone cone) {
         cones.set(index, cone);
     }
@@ -60,8 +61,6 @@ public class Repository {
 
     public void sortCone(Comparator<? super Cone> comparator) {
         cones.stream()
-                .sorted(comparator)
-                .forEach(o -> toString());
-        return;
+                .sorted(comparator);
     }
 }
