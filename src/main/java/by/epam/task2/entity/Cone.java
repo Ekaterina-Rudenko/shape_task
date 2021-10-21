@@ -2,10 +2,16 @@ package by.epam.task2.entity;
 
 import by.epam.task2.exception.CustomException;
 import by.epam.task2.generator.IdGenerator;
+import by.epam.task2.observer.ConeEvent;
+import by.epam.task2.observer.ConeObserver;
 import by.epam.task2.observer.Observable;
+import by.epam.task2.observer.impl.ConeConeObserverImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cone implements Observable {
     static Logger logger = LogManager.getLogger();
@@ -13,6 +19,7 @@ public class Cone implements Observable {
     private Point centrePoint;
     private Point apexPoint;
     private double radius;
+    private List<ConeObserver> observers = new ArrayList<>();
 
     public Cone(Point centerPoint, Point apexPoint, double radius) {
         this.coneId = IdGenerator.generateId();
@@ -27,6 +34,7 @@ public class Cone implements Observable {
 
     public void setConeID(long coneId) {
         this.coneId = coneId;
+        notifyObservers();
     }
 
     public Point getCentrePoint() {
@@ -99,6 +107,24 @@ public class Cone implements Observable {
         sb.append(", radius=").append(radius);
         sb.append('}');
         return sb.toString();
+    }
+    @Override
+    public void attach(ConeObserver observer){
+        observers.add(observer);
+    }
+    @Override
+    public void detach(ConeObserver observer){
+        observers.remove(observer);
+    }
+    @Override
+    public void notifyObservers() throws CustomException {
+        ConeEvent coneEvent = new ConeEvent(this);
+        if(!observers.isEmpty()){
+            for(ConeObserver observer : observers){
+                observer.updateSurfaceArea(coneEvent);
+                observer.updateVolume(coneEvent);
+            }
+        }
     }
 }
 
