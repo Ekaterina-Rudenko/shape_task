@@ -2,11 +2,12 @@ package by.epam.task2.entity;
 
 import by.epam.task2.exception.CustomException;
 import by.epam.task2.generator.IdGenerator;
+import by.epam.task2.observer.Observable;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Cone {
+public class Cone implements Observable {
     static Logger logger = LogManager.getLogger();
     private long coneId;
     private Point centrePoint;
@@ -20,12 +21,12 @@ public class Cone {
         this.radius = radius;
     }
 
-    public long getConeID() {
+    public long getConeId() {
         return coneId;
     }
 
-    public void setConeID(long coneID) {
-        this.coneId = coneID;
+    public void setConeID(long coneId) {
+        this.coneId = coneId;
     }
 
     public Point getCentrePoint() {
@@ -37,6 +38,7 @@ public class Cone {
             throw new CustomException("Can't set null point");
         }
         this.centrePoint = centrePoint;
+        notifyObservers();
     }
 
     public Point getApexPoint() {
@@ -48,6 +50,7 @@ public class Cone {
             throw new CustomException("Can't set null point");
         }
         this.apexPoint = apexPoint;
+        notifyObservers();
     }
 
     public double getRadius() {
@@ -60,6 +63,7 @@ public class Cone {
             throw new CustomException("The radius " + radius + " can't be set");
         }
         this.radius = radius;
+        notifyObservers();
     }
 
     @Override
