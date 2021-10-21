@@ -11,6 +11,7 @@ public interface ConeCalculation {
     double dissectionVolumeRatio(Cone cone, double dissectionHeight) throws CustomException;
 
     boolean isBaseOnPlane(Cone cone);
+
     double averageSurfaceArea();
 
 }
