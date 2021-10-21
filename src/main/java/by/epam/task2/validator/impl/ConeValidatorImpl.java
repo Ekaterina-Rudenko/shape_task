@@ -23,7 +23,7 @@ public class ConeValidatorImpl implements ConeValidator {
     }
 
     @Override
-    public boolean isConeParameter(double... parameter) {
+    public boolean isCone(double... parameter) {
         boolean isValidSize = (parameter.length == NUMBER_OF_CONE_PARAMETERS);
         boolean isValidParameter = (Double.compare(parameter[INDEX_CENTRE_X], parameter[INDEX_APEX_X]) == 0
                 && Double.compare(parameter[INDEX_CENTRE_Y], parameter[INDEX_APEX_Y]) == 0
@@ -33,7 +33,7 @@ public class ConeValidatorImpl implements ConeValidator {
     }
 
     @Override
-    public boolean isConeParameter(Cone cone) {
+    public boolean isCone(Cone cone) {
         Point centre = cone.getCentrePoint();
         Point apex = cone.getApexPoint();
         double radius = cone.getRadius();
@@ -41,7 +41,7 @@ public class ConeValidatorImpl implements ConeValidator {
     }
 
     @Override
-    public boolean isConeParameter(Point centre, Point apex, double radius) {
+    public boolean isCone(Point centre, Point apex, double radius) {
         return checkParameter(centre, apex, radius);
     }
 
