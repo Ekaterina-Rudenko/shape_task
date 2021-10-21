@@ -22,7 +22,7 @@ public class Warehouse {
     private Warehouse(){
         this.coneMap = new HashMap<>();
     }
-    public ConeParameter getParameter(long coneId) throws CustomException{
+    public ConeParameter getCone(long coneId) throws CustomException{
         if(!coneMap.containsKey(coneId)){
             logger.log(Level.ERROR, "Warehouse doesn't contain cone with id " + coneId);
             throw new CustomException("Warehouse doesn't contain cone with id " + coneId);
