@@ -5,7 +5,6 @@ import by.epam.task2.generator.IdGenerator;
 import by.epam.task2.observer.ConeEvent;
 import by.epam.task2.observer.ConeObserver;
 import by.epam.task2.observer.Observable;
-import by.epam.task2.observer.impl.ConeConeObserverImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -108,19 +107,22 @@ public class Cone implements Observable {
         sb.append('}');
         return sb.toString();
     }
+
     @Override
-    public void attach(ConeObserver observer){
+    public void attach(ConeObserver observer) {
         observers.add(observer);
     }
+
     @Override
-    public void detach(ConeObserver observer){
+    public void detach(ConeObserver observer) {
         observers.remove(observer);
     }
+
     @Override
     public void notifyObservers() throws CustomException {
         ConeEvent coneEvent = new ConeEvent(this);
-        if(!observers.isEmpty()){
-            for(ConeObserver observer : observers){
+        if (!observers.isEmpty()) {
+            for (ConeObserver observer : observers) {
                 observer.updateSurfaceArea(coneEvent);
                 observer.updateVolume(coneEvent);
             }
