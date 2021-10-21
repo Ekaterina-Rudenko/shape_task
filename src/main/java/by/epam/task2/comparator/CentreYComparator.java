@@ -5,11 +5,9 @@ import by.epam.task2.entity.Cone;
 import java.util.Comparator;
 
 public class CentreYComparator implements Comparator<Cone> {
-    public int compare(Cone o1, Cone o2){
+    public int compare(Cone o1, Cone o2) {
         double y1 = o1.getCentrePoint().getY();
         double y2 = o2.getCentrePoint().getY();
-        int compare = Double.compare(y1, y2);
-        return compare;
+        return Double.compare(y1, y2);
     }
-
 }
