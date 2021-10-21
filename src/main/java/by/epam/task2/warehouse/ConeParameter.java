@@ -10,7 +10,6 @@ public class ConeParameter {
         this.surfaceArea = surfaceArea;
         this.volume = volume;
     }
-
     public double getSurfaceArea() {
         return surfaceArea;
     }
