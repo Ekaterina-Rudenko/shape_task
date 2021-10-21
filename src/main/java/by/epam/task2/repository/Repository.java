@@ -1,11 +1,15 @@
 package by.epam.task2.repository;
 
 import by.epam.task2.entity.Cone;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Repository {
+    static Logger logger = LogManager.getLogger();
     private static Repository instance;
     private List<Cone> cones;
 
@@ -52,15 +56,16 @@ public class Repository {
     }
 
     public List<Cone> query(Specification specification) {
-        List<Cone> result = new ArrayList<>();
-        result = cones.stream()
+        List<Cone> result = cones.stream()
                 .filter(specification::specify)
                 .collect(Collectors.toList());
         return result;
     }
 
     public void sortCone(Comparator<? super Cone> comparator) {
-        cones.stream()
-                .sorted(comparator);
+        List<Cone> result = cones.stream()
+                .sorted(comparator)
+                .collect(Collectors.toList());
+        logger.log(Level.INFO, "Sorted with comparator " + comparator + " : " + result);
     }
 }
