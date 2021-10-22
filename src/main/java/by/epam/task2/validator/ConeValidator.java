@@ -5,7 +5,7 @@ import by.epam.task2.entity.Point;
 
 public interface ConeValidator {
     int NUMBER_OF_CONE_PARAMETERS = 7;
-    String VALID_CONE_STRING = "([+-]?\\d+((\\.\\d+)|\\.)?\\s){6}[+]?(\\d+\\.\\d+)|(\\d[1,9]\\.?)";
+    String VALID_CONE_STRING = "([+-]?\\d+((\\.\\d+)|\\.)?\\s){6}[+]?\\d+((\\.\\d+)|\\.)?";
     int INDEX_CENTRE_X = 0;
     int INDEX_CENTRE_Y = 1;
     int INDEX_CENTRE_Z = 2;
