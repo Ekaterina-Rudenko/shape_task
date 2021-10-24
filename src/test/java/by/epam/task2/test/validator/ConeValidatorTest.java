@@ -14,14 +14,10 @@ import java.util.List;
 
 public class ConeValidatorTest {
     ConeValidator validator;
-    Cone correctCone;
-    Cone wrongCone;
 
     @BeforeClass
     public void create() {
         validator = ConeValidatorImpl.getInstance();
-        correctCone = new Cone(new Point(1, 1, 1), new Point(1, 1, 5), 4.0);
-        wrongCone = new Cone(new Point(100, 1, 1), new Point(1, 1, 5), 4.0);
     }
 
     @DataProvider(name = "parametersToValidate")
@@ -54,14 +50,14 @@ public class ConeValidatorTest {
     }
 
     @DataProvider(name = "coneForValidation")
-        public Object[][] conesData(){
+    public Object[][] conesData() {
         List<Cone> cones = new ArrayList<>();
-        cones.add(new Cone(new Point(1, 1 ,0), new Point(1, 1, 2), 100));
+        cones.add(new Cone(new Point(1, 1, 0), new Point(1, 1, 2), 100));
         cones.add(new Cone(new Point(-1.0, -1.0, 2.0), new Point(-1.0, -1.0, -7), 4));
-        cones.add(new Cone( new Point(2, 2, 2), new Point(2, 2, 6), -100)); //wrong radius
-        cones.add(new Cone( new Point(2, 2, 2), new Point(2, 2, 6), 0)); //zero radius
-        cones.add(new Cone( new Point(2, 2, 2), new Point(2, 2, 2), 10)); //zero height
-        cones.add(new Cone( new Point(-10, 2, 2), new Point(2, 2, 6), 10));//wrong coordinate
+        cones.add(new Cone(new Point(2, 2, 2), new Point(2, 2, 6), -100)); //wrong radius
+        cones.add(new Cone(new Point(2, 2, 2), new Point(2, 2, 6), 0)); //zero radius
+        cones.add(new Cone(new Point(2, 2, 2), new Point(2, 2, 2), 10)); //zero height
+        cones.add(new Cone(new Point(-10, 2, 2), new Point(2, 2, 6), 10));//wrong coordinate
         List<Boolean> expected = new ArrayList<>();
         expected.add(true);
         expected.add(true);
@@ -71,10 +67,11 @@ public class ConeValidatorTest {
         expected.add(false);
         return new Object[][]{{cones, expected}};
     }
+
     @Test(dataProvider = "coneForValidation")
-    public void isConeShapeTest(List<Cone> cones, List<Boolean> expected){
+    public void isConeShapeTest(List<Cone> cones, List<Boolean> expected) {
         List<Boolean> actual = new ArrayList<>();
-        for(Cone cone : cones){
+        for (Cone cone : cones) {
             boolean isValid = validator.isCone(cone);
             actual.add(isValid);
         }
@@ -98,7 +95,7 @@ public class ConeValidatorTest {
     }
 
     @DataProvider(name = "dissectionHeightData")
-    public Object[][] dissectionTestData(){
+    public Object[][] dissectionTestData() {
         List<Double> dissectionHeight = new ArrayList<>();
         dissectionHeight.add(5.0);
         dissectionHeight.add(1.1);
@@ -115,20 +112,15 @@ public class ConeValidatorTest {
         expected.add(false);
         return new Object[][]{{dissectionHeight, expected}};
     }
+
     @Test(dataProvider = "dissectionHeightData")
-    public void checkDissectionHeightTest() {
+    public void checkDissectionHeightTest(List<Double> dissectionHeight, List<Boolean> expected) {
         Cone correctCone = new Cone(new Point(1, 1, 1), new Point(1, 1, 10), 4.0);
-
-        double dissectionHeight = 3.0;
-        boolean actual = validator.checkDissectionHeight(correctCone, dissectionHeight);
-        Assert.assertEquals(actual, true);
-    }
-
-    @Test
-    public void checkDissectionHeightNegativeTest() {
-        Cone correctCone = new Cone(new Point(1, 1, 1), new Point(1, 1, 5), 4.0);
-        double dissectionHeight = 100.0;
-        boolean actual = validator.checkDissectionHeight(correctCone, dissectionHeight);
-        Assert.assertNotEquals(actual, true);
+        List<Boolean> actual = new ArrayList<>();
+        for (double height : dissectionHeight) {
+            boolean isValid = validator.checkDissectionHeight(correctCone, height);
+            actual.add(isValid);
+        }
+        Assert.assertEquals(actual, expected);
     }
 }
