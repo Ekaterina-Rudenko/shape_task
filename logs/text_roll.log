@@ -55,3 +55,9 @@ java.nio.file.NoSuchFileException: test\wrong.txt
 2021-10-24 07:41:08 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The list for parsing is null
 2021-10-24 07:45:22 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
 2021-10-24 07:45:29 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The list for parsing is null
+2021-10-24 23:12:31 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 23:12:31 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The list for parsing is null
+2021-10-24 23:25:18 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 23:49:21 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 23:49:30 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-25 00:27:30 [main] ERROR epam.task2.factory.impl.ConeFactoryImpl - The parameters for creating a cone are incorrect 
