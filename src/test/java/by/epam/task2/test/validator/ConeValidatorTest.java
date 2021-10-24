@@ -21,41 +21,6 @@ public class ConeValidatorTest {
     }
 
     @Test
-    public void checkConeStringTest() {
-        String correctString = "1.0 2.0 0.0 1.0 2.0 6.0 3.5";
-        boolean actual = validator.checkConeString(correctString);
-        Assert.assertEquals(actual, true);
-    }
-
-    @Test
-    public void checkConeStringSecondTest() {
-        String correctString = "1 2 0 1 2 6 3";
-        boolean actual = validator.checkConeString(correctString);
-        Assert.assertEquals(actual, true);
-    }
-
-    @Test
-    public void checkConeStringThirdTest() {
-        String correctString = "1 -2 0 1 -2 -6 3";
-        boolean actual = validator.checkConeString(correctString);
-        Assert.assertEquals(actual, true);
-    }
-
-    @Test
-    public void checkConeStringNegativeTest() {
-        String wrongString = "12334567";
-        boolean actual = validator.checkConeString(wrongString);
-        Assert.assertNotEquals(actual, true);
-    }
-
-    @Test
-    public void checkConeStringrSizeTest() {
-        String wrongString = "1 2 3 3 4 5 6 7 8";
-        boolean actual = validator.checkConeString(wrongString);
-        Assert.assertNotEquals(actual, true);
-    }
-
-    @Test
     public void isConeDoubleArrayTest() {
         boolean actual = validator.isCone(1, 1, 2, 1, 1, 10, 4.5);
         Assert.assertEquals(actual, true);
