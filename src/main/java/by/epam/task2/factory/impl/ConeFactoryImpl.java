@@ -20,6 +20,18 @@ public class ConeFactoryImpl implements ConeFactory {
     PointFactoryImpl pointFactoryImpl = new PointFactoryImpl();
 
     @Override
+    public List<Cone> createConeList(List<double[]> coneParameter) throws CustomException {
+        List<Cone> coneList = new ArrayList<>();
+        for (double[] array : coneParameter) {
+            if (validator.isCone(array)) {
+                Cone cone = createCone(array);
+                coneList.add(cone);
+            }
+        }
+        return coneList;
+    }
+
+    @Override
     public Cone createCone(double[] coordinatesDouble) throws CustomException {
         if (!validator.isCone(coordinatesDouble)) {
             logger.log(Level.ERROR, "The parameters " + Arrays.toString(coordinatesDouble) + " for creating a cone are incorrect ");
@@ -55,15 +67,5 @@ public class ConeFactoryImpl implements ConeFactory {
         Point centre = pointFactoryImpl.createPoint(centreX, centreY, centreZ);
         Point apex = pointFactoryImpl.createPoint(apexX, apexY, apexZ);
         return new Cone(centre, apex, radius);
-    }
-
-    @Override
-    public List<Cone> createConeList(List<double[]> coneParameter) throws CustomException {
-        List<Cone> coneList = new ArrayList<>();
-        for (double[] array : coneParameter) {
-            Cone cone = createCone(array);
-            coneList.add(cone);
-        }
-        return coneList;
     }
 }
