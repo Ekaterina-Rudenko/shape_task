@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface ConeParser {
     String DELIMITER_SPACE = "\\s+";
-    Optional<double[]> parseParameter(String parameterLine) throws CustomException;
+    double[] parseParameter(String parameterLine) throws CustomException;
     List<double[]> parseParameterToList(List<String> parameterLineList) throws CustomException;
 }
