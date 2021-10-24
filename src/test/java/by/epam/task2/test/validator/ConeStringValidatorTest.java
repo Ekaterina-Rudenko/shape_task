@@ -19,13 +19,13 @@ public class ConeStringValidatorTest {
     }
 
     @Test(dataProvider = "dataForValidation")
-    public void checkConeStringTest(List<String> lines, List<Boolean> results) {
+    public void checkConeStringTest(List<String> lines, List<Boolean> expected) {
         List<Boolean> actual = new ArrayList<>();
         for (String line:lines) {
            boolean actualResult = validator.checkConeString(line);
            actual.add(actualResult);
         }
-        Assert.assertEquals(actual, results);
+        Assert.assertEquals(actual, expected);
     }
 
     @DataProvider(name = "dataForValidation")
@@ -40,16 +40,16 @@ public class ConeStringValidatorTest {
         lines.add("12334567");
         lines.add("1 2 3 3 4 5 6 7 8");
         lines.add("1w ss 3 3 4 5 6 7 8");
-        ArrayList<Boolean> results = new ArrayList<>();
-        results.add(true);
-        results.add(true);
-        results.add(true);
-        results.add(true);
-        results.add(true);
-        results.add(false);
-        results.add(false);
-        results.add(false);
-        results.add(false);
-        return new Object[][]{{lines, results}};
+        ArrayList<Boolean> expected = new ArrayList<>();
+        expected.add(true);
+        expected.add(true);
+        expected.add(true);
+        expected.add(true);
+        expected.add(true);
+        expected.add(false);
+        expected.add(false);
+        expected.add(false);
+        expected.add(false);
+        return new Object[][]{{lines, expected}};
     }
 }
