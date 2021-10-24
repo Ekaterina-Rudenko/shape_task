@@ -49,7 +49,7 @@ public class ConeFactoryImpl implements ConeFactory {
     @Override
     public Cone createCone(double centreX, double centreY, double centreZ, double apexX, double apexY, double apexZ, double radius) throws CustomException {
         if (!validator.isCone(centreX, centreY, centreZ, apexX, apexY, apexZ, radius)) {
-            logger.log(Level.ERROR, "The parameters  radius for creating a cone are incorrect ");
+            logger.log(Level.ERROR, "The parameters for creating a cone are incorrect ");
             throw new CustomException("The parameters for creating a cone are incorrect ");
         }
         Point centre = pointFactoryImpl.createPoint(centreX, centreY, centreZ);
