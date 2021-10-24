@@ -20,10 +20,12 @@ public class ConeValidatorImpl implements ConeValidator {
     @Override
     public boolean isCone(double... parameter) {
         boolean isValidSize = (parameter.length == NUMBER_OF_CONE_PARAMETERS);
-        boolean isValidParameter = (Double.compare(parameter[INDEX_CENTRE_X], parameter[INDEX_APEX_X]) == 0
+        boolean isValidParameter = false;
+        if(isValidSize){
+        isValidParameter = (Double.compare(parameter[INDEX_CENTRE_X], parameter[INDEX_APEX_X]) == 0
                 && Double.compare(parameter[INDEX_CENTRE_Y], parameter[INDEX_APEX_Y]) == 0
                 && Double.compare(parameter[INDEX_CENTRE_Z], parameter[INDEX_APEX_Z]) != 0
-                && parameter[INDEX_RADIUS] > 0);
+                && parameter[INDEX_RADIUS] > 0);}
         return (isValidSize && isValidParameter);
     }
 
