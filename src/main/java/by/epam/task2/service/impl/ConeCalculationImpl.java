@@ -23,6 +23,7 @@ public class ConeCalculationImpl implements ConeCalculation {
         double height = findHeight(cone);
         double slantHeight = Math.hypot(cone.getRadius(), height);
         double surfaceArea = Math.PI * radius * (radius + slantHeight);
+        logger.log(Level.INFO, "The surface area of " + cone + " is " + surfaceArea);
         return surfaceArea;
     }
 
@@ -31,6 +32,7 @@ public class ConeCalculationImpl implements ConeCalculation {
         double radius = cone.getRadius();
         double height = findHeight(cone);
         double volume = coneVolume(radius, height);
+        logger.log(Level.INFO, "The volume of " + cone + " is " + volume);
         return volume;
     }
 
@@ -47,6 +49,7 @@ public class ConeCalculationImpl implements ConeCalculation {
         double littleConeVolume = coneVolume(dissectionRadius, littleConeHeight);
         double coneVolume = findVolume(cone);
         double volumeRatio = littleConeVolume / (coneVolume - littleConeVolume);
+        logger.log(Level.INFO, "Fo dissection height of " + dissectionHeight + " the volume ratio for " + cone + " is " + volumeRatio);
         return volumeRatio;
     }
 
@@ -66,7 +69,9 @@ public class ConeCalculationImpl implements ConeCalculation {
         for (Cone c : cones) {
             totalSurface += warehouse.getCone(c.getConeId()).getSurfaceArea();
         }
-        return totalSurface / cones.size();
+        double averageArea = totalSurface / cones.size();
+        logger.log(Level.INFO, "The average surface area of cones is " + averageArea);
+        return averageArea;
     }
 
     private double findHeight(Cone cone) {
