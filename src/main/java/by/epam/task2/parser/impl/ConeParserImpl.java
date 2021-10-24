@@ -1,12 +1,12 @@
 package by.epam.task2.parser.impl;
 
 import by.epam.task2.exception.CustomException;
+import by.epam.task2.validator.ConeStringValidator;
+import by.epam.task2.validator.impl.ConeStringValidatorImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import by.epam.task2.parser.ConeParser;
-import by.epam.task2.validator.ConeValidator;
-import by.epam.task2.validator.impl.ConeValidatorImpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +17,7 @@ public class ConeParserImpl implements ConeParser {
 
     @Override
     public Optional<double[]> parseParameter(String parameterLine) throws CustomException {
-        ConeValidator validator = ConeValidatorImpl.getInstance();
+        ConeStringValidator validator = ConeStringValidatorImpl.getInstance();
         if (parameterLine == null) {
             logger.log(Level.ERROR, "The line for parsing is null");
             throw new CustomException("The line for parsing is null");
@@ -35,7 +35,7 @@ public class ConeParserImpl implements ConeParser {
 
     @Override
     public List<double[]> parseParameterToList(List<String> parameterLineList) throws CustomException {
-        ConeValidator validator = ConeValidatorImpl.getInstance();
+        ConeStringValidator validator = ConeStringValidatorImpl.getInstance();
         if (parameterLineList == null) {
             logger.log(Level.ERROR, "The line for parsing is null");
             throw new CustomException("The line for parsing is null");
