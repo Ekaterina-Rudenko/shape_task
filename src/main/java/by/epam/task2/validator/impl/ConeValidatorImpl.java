@@ -18,11 +18,6 @@ public class ConeValidatorImpl implements ConeValidator {
     }
 
     @Override
-    public boolean checkConeString(String coneDataLine) {
-        return coneDataLine.matches(VALID_CONE_STRING);
-    }
-
-    @Override
     public boolean isCone(double... parameter) {
         boolean isValidSize = (parameter.length == NUMBER_OF_CONE_PARAMETERS);
         boolean isValidParameter = (Double.compare(parameter[INDEX_CENTRE_X], parameter[INDEX_APEX_X]) == 0
