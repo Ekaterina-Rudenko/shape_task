@@ -82,8 +82,7 @@ public class Cone implements Observable {
             return false;
         }
         Cone cone = (Cone) o;
-        return coneId == cone.coneId
-                && Double.compare(cone.radius, radius) == 0
+        return Double.compare(cone.radius, radius) == 0
                 && centrePoint.equals(cone.centrePoint)
                 && apexPoint.equals(cone.apexPoint);
     }
