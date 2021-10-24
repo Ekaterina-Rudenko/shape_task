@@ -51,8 +51,10 @@ public class ConeValidatorImpl implements ConeValidator {
 
     @Override
     public boolean checkDissectionHeight(Cone cone, double height) {
-        boolean isValidHeight = (height >= cone.getCentrePoint().getZ()
-                && height <= cone.getApexPoint().getZ());
-        return isValidHeight;
+        double centre = cone.getCentrePoint().getZ();
+        double apex = cone.getApexPoint().getZ();
+        boolean isValid = (apex > centre && height >= centre && height <= apex) ||
+                (apex < centre && height <= centre && height >= apex);
+        return isValid;
     }
 }
