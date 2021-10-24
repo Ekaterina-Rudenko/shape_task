@@ -37,3 +37,16 @@ java.nio.file.NoSuchFileException: test\wrong.txt
 	at org.testng.TestNG.run(TestNG.java:1031) [testng-7.4.0.jar:7.4.0]
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109) [testng-rt.jar:?]
+2021-10-24 06:04:04 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base is on the coordinates plane - true
+2021-10-24 06:04:04 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base is on the coordinates plane - false
+2021-10-24 06:04:04 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base is on the coordinates plane - false
+2021-10-24 06:06:02 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 121.35160946797055
+2021-10-24 06:06:02 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of Cone{coneId=2, centerPoint=Point{x=-1.0, y=-1.0, z=-1.0}, apexPoint=Point{x=-1.0, y=-1.0, z=0.0}, radius=3.0} is 58.078098679696446
+2021-10-24 06:06:02 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of Cone{coneId=3, centerPoint=Point{x=-10.0, y=-10.0, z=0.0}, apexPoint=Point{x=-10.0, y=-10.0, z=9.0}, radius=9.0} is 614.3425229316009
+2021-10-24 06:18:27 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 67.02064327658225
+2021-10-24 06:18:27 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - Fo dissection height of 2.0 the volume ratio for Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 0.14285714285714285
+2021-10-24 06:18:59 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 67.02064327658225
+2021-10-24 06:18:59 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - Fo dissection height of 2.0 the volume ratio for Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 0.14285714285714285
+2021-10-24 06:19:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 67.02064327658225
+2021-10-24 06:19:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - Fo dissection height of 2.0 the volume ratio for Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 0.14285714285714285
+2021-10-24 06:20:25 [main] ERROR epam.task2.service.impl.ConeCalculationImpl - The dissection height 10.0 is beyond cone height 
