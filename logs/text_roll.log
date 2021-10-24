@@ -50,3 +50,8 @@ java.nio.file.NoSuchFileException: test\wrong.txt
 2021-10-24 06:19:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 67.02064327658225
 2021-10-24 06:19:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - Fo dissection height of 2.0 the volume ratio for Cone{coneId=1, centerPoint=Point{x=0.0, y=0.0, z=0.0}, apexPoint=Point{x=0.0, y=0.0, z=4.0}, radius=4.0} is 0.14285714285714285
 2021-10-24 06:20:25 [main] ERROR epam.task2.service.impl.ConeCalculationImpl - The dissection height 10.0 is beyond cone height 
+2021-10-24 07:26:17 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 07:28:07 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 07:41:08 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The list for parsing is null
+2021-10-24 07:45:22 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The line for parsing is null or invalid
+2021-10-24 07:45:29 [main] ERROR epam.task2.parser.impl.ConeParserImpl - The list for parsing is null
