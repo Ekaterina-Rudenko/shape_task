@@ -15,6 +15,6 @@ public class HeightSpecification implements Specification {
     @Override
     public boolean specify(Cone cone) {
         double height = Math.abs(cone.getApexPoint().getZ() - cone.getCentrePoint().getZ());
-        return (height <= minHeight && height >= maxHeight);
+        return (height >= minHeight && height <= maxHeight);
     }
 }
