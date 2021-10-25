@@ -25,8 +25,7 @@ public class Repository {
     }
 
     public List<Cone> getCones() {
-        List<Cone> cones = new ArrayList<>();
-        return cones;
+        return Collections.unmodifiableList(cones);
     }
 
     public Optional<Cone> get(int index) {
@@ -34,21 +33,37 @@ public class Repository {
         return Optional.ofNullable(cone);
     }
 
+    public int size() {
+        return cones.size();
+    }
 
     public void setCone(int index, Cone cone) {
         cones.set(index, cone);
     }
 
     public boolean add(Cone cone) {
-        return cones.add(cone);
+        boolean isAdded = false;
+        if (!cones.contains(cone)) {
+            isAdded = cones.add(cone);
+        }
+        return isAdded;
     }
 
     public boolean addAll(Collection<? extends Cone> c) {
-        return cones.addAll(c);
+        boolean isAdded = false;
+        if (!cones.contains(c)) {
+            isAdded = cones.addAll(c);
+        }
+        logger.log(Level.INFO, "Cones were added to repository " + isAdded);
+        return isAdded;
     }
 
     public boolean remove(Cone cone) {
         return cones.remove(cone);
+    }
+
+    public Cone remove(int index) {
+        return cones.remove(index);
     }
 
     public boolean removeAll(Collection<Cone> c) {
@@ -59,6 +74,7 @@ public class Repository {
         List<Cone> result = cones.stream()
                 .filter(specification::specify)
                 .collect(Collectors.toList());
+        logger.log(Level.INFO, "\nQuery " + specification.getClass().getSimpleName() + " result is : " + result);
         return result;
     }
 
@@ -66,6 +82,6 @@ public class Repository {
         List<Cone> result = cones.stream()
                 .sorted(comparator)
                 .collect(Collectors.toList());
-        logger.log(Level.INFO, "Sorted with comparator " + comparator + " : " + result);
+        logger.log(Level.INFO, "\nSorted with comparator " + comparator.getClass().getSimpleName() + " : " + result);
     }
 }
