@@ -1,0 +1,77 @@
+2021-10-25 00:54:28 [main] ERROR epam.task2.service.impl.ConeCalculationImpl - The dissection height 2.0 is beyond cone height for cone 6, the ratio can't be calculated fot this height
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone1 is 114.86220996738552
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone1 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection 2.0 the volume ratio for cone1 is 0.07999999999999997
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 76.96902001294993
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone2 is 114.86220996738552
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone2 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 76.96902001294993
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection 2.0 the volume ratio for cone2 is 0.07999999999999997
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone3 is 197.35107946539623
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone3 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection 2.0 the volume ratio for cone3 is 0.027799227799227798
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone4 is 1357.1680263507906
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone4 is 1017.8760197630929
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone4 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone4 is 1357.1680263507906
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection 2.0 the volume ratio for cone4 is 0.039942938659058486
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone5 is 2111.150263212341
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone5 is 1147.52661739235
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone5 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone5 is 2111.150263212341
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection 2.0 the volume ratio for cone5 is 0.01780415430267062
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone6 is 117.28612573401894
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone6 is 151.57880131104514
+2021-10-25 00:55:44 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone6 is on the coordinates plane - false
+2021-10-25 00:55:44 [main] ERROR epam.task2.service.impl.ConeCalculationImpl - The dissection height 2.0 is beyond cone height for cone 6, the ratio can't be calculated fot this height
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone1 is 114.86220996738552
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone1 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone1 is 0.07999999999999997
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 76.96902001294993
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone2 is 114.86220996738552
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone2 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 76.96902001294993
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone2 is 0.07999999999999997
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone3 is 197.35107946539623
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone3 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone3 is 0.027799227799227798
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone4 is 1357.1680263507906
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone4 is 1017.8760197630929
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone4 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone4 is 1357.1680263507906
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone4 is 0.039942938659058486
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone5 is 2111.150263212341
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone5 is 1147.52661739235
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone5 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone5 is 2111.150263212341
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone5 is 0.01780415430267062
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone6 is 117.28612573401894
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone6 is 151.57880131104514
+2021-10-25 00:56:21 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone6 is on the coordinates plane - false
+2021-10-25 00:56:21 [main] ERROR epam.task2.service.impl.ConeCalculationImpl - The dissection height 2.0 is beyond cone height for cone 6, the ratio can't be calculated fot this height
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone1 is 114.86220996738552
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone1 is on the coordinates plane - false
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone1 is 76.96902001294993
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone1 is 0.07999999999999997
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 58449.331320038094
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone2 is 9371.740091617572
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone2 is on the coordinates plane - false
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone2 is 58449.331320038094
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone2 is 0.0010752289496125467
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone3 is 197.35107946539623
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone3 is on the coordinates plane - false
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone3 is 184.3067690106012
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - For dissection height 2.0 the volume ratio for cone3 is 0.027799227799227798
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The volume of cone4 is 1357.1680263507906
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The surface area of cone4 is 1017.8760197630929
+2021-10-25 00:58:26 [main] INFO  epam.task2.service.impl.ConeCalculationImpl - The cone base of cone4 is on the coordinates plane - false
