@@ -23,7 +23,6 @@ public class ConeCalculationImpl implements ConeCalculation {
         double height = findHeight(cone);
         double slantHeight = Math.hypot(cone.getRadius(), height);
         double surfaceArea = Math.PI * radius * (radius + slantHeight);
-        logger.log(Level.INFO, "The surface area of " + cone + " is " + surfaceArea);
         return surfaceArea;
     }
 
@@ -32,7 +31,6 @@ public class ConeCalculationImpl implements ConeCalculation {
         double radius = cone.getRadius();
         double height = findHeight(cone);
         double volume = coneVolume(radius, height);
-        logger.log(Level.INFO, "The volume of " + cone + " is " + volume);
         return volume;
     }
 
@@ -40,8 +38,8 @@ public class ConeCalculationImpl implements ConeCalculation {
     public double dissectionVolumeRatio(Cone cone, double dissectionHeight) throws CustomException {
         ConeValidator validator = ConeValidatorImpl.getInstance();
         if (!validator.checkDissectionHeight(cone, dissectionHeight)) {
-            logger.log(Level.ERROR, "The dissection height " + dissectionHeight + " is beyond cone height ");
-            throw new CustomException("The dissection height " + dissectionHeight + " is beyond cone height ");
+            logger.log(Level.ERROR, "The dissection height " + dissectionHeight + " is beyond cone height for cone " + cone.getConeId() + ", the ratio can't be calculated fot this height");
+            throw new CustomException("The dissection height " + dissectionHeight + " is beyond cone height for cone " + cone.getConeId());
         }
         double wholeHeight = findHeight(cone);
         double littleConeHeight = wholeHeight - dissectionHeight;
@@ -49,14 +47,12 @@ public class ConeCalculationImpl implements ConeCalculation {
         double littleConeVolume = coneVolume(dissectionRadius, littleConeHeight);
         double coneVolume = findVolume(cone);
         double volumeRatio = littleConeVolume / (coneVolume - littleConeVolume);
-        logger.log(Level.INFO, "Fo dissection height of " + dissectionHeight + " the volume ratio for " + cone + " is " + volumeRatio);
         return volumeRatio;
     }
 
     @Override
     public boolean isBaseOnPlane(Cone cone) {
         boolean onPlane = (cone.getCentrePoint().getX() == 0 && cone.getCentrePoint().getY() == 0);
-        logger.log(Level.INFO, "The cone base is on the coordinates plane - " + onPlane);
         return onPlane;
     }
 
@@ -70,8 +66,18 @@ public class ConeCalculationImpl implements ConeCalculation {
             totalSurface += warehouse.getCone(c.getConeId()).getSurfaceArea();
         }
         double averageArea = totalSurface / cones.size();
-        logger.log(Level.INFO, "The average surface area of cones is " + averageArea);
         return averageArea;
+    }
+    public double averageVolume() {
+        Repository repository = Repository.getInstance();
+        Warehouse warehouse = Warehouse.getInstance();
+        double totalVolume = 0;
+        List<Cone> cones = repository.getCones();
+        for (Cone c : cones) {
+            totalVolume += warehouse.getCone(c.getConeId()).getVolume();
+        }
+        double averageVolume = totalVolume / cones.size();
+        return averageVolume;
     }
 
     private double findHeight(Cone cone) {
