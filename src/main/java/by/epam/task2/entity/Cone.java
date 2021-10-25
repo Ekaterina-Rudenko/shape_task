@@ -98,12 +98,12 @@ public class Cone implements Observable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Cone{");
+        final StringBuilder sb = new StringBuilder("\nCone{");
         sb.append("coneId=").append(coneId);
         sb.append(", centerPoint=").append(centrePoint);
         sb.append(", apexPoint=").append(apexPoint);
         sb.append(", radius=").append(radius);
-        sb.append('}');
+        sb.append("}");
         return sb.toString();
     }
 
@@ -122,8 +122,7 @@ public class Cone implements Observable {
         ConeEvent coneEvent = new ConeEvent(this);
         if (!observers.isEmpty()) {
             for (ConeObserver observer : observers) {
-                observer.updateSurfaceArea(coneEvent);
-                observer.updateVolume(coneEvent);
+                observer.updateConeParameters(coneEvent);
             }
         }
     }
