@@ -1,6 +1,7 @@
 package by.epam.task2.warehouse;
 
 import by.epam.task2.entity.Cone;
+import by.epam.task2.entity.ConeParameter;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
