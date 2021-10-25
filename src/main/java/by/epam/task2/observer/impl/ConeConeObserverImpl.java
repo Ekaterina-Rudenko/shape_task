@@ -47,7 +47,7 @@ public class ConeConeObserverImpl implements ConeObserver {
     }
 
     @Override
-    public void parameterChanged(ConeEvent coneEvent) throws CustomException {
+    public void updateConeParameters(ConeEvent coneEvent) throws CustomException {
         Cone cone = coneEvent.getSource();
         ConeValidator validator = ConeValidatorImpl.getInstance();
         if (!validator.isCone(cone)) {
@@ -57,8 +57,11 @@ public class ConeConeObserverImpl implements ConeObserver {
         ConeCalculation coneCalculation = new ConeCalculationImpl();
         double surfaceArea = coneCalculation.findSurfaceArea(cone);
         double volume = coneCalculation.findVolume(cone);
+        ConeParameter coneParameter = new ConeParameter();
+        coneParameter.setVolume(volume);
+        coneParameter.setSurfaceArea(surfaceArea);
         Warehouse warehouse = Warehouse.getInstance();
         long coneId = cone.getConeId();
-        warehouse.putParameter(coneId, surfaceArea, volume);
+        warehouse.putParameter(coneId, coneParameter);
     }
 }
