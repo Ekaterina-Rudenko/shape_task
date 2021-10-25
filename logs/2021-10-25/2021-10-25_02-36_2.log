@@ -1,0 +1,86 @@
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - 11 cones have been created: [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=3, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=4, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=10.0}, radius=120.0}, 
+Cone{coneId=5, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=15.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=40.0}, 
+Cone{coneId=7, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=8, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=8.0}, radius=4.5}, 
+Cone{coneId=9, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=42.2}, 
+Cone{coneId=10, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}, 
+Cone{coneId=11, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=4.0}]
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone1 is 76.96902001294993
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone1 is 114.86220996738552
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone1 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone1 is 0.07999999999999997
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone2 is 15586.48835201016
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone2 is 6222.648060994566
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone2 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone2 is 0.013861386138613862
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone3 is 184.3067690106012
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone3 is 197.35107946539623
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone3 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone3 is 0.027799227799227798
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone4 is 135716.80263507908
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone4 is 90604.92450379752
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone4 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone4 is 0.03994293865905847
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone5 is 2111.150263212341
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone5 is 1147.52661739235
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone5 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone5 is 0.01780415430267062
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone6 is 36861.35380212024
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone6 is 10763.203099836981
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone6 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone6 is 0.00757002271006813
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone7 is 636.6961111275314
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone7 is 513.2041003987907
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone7 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone7 is 0.03625925366369541
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone8 is 233.26325452904211
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone8 is 231.63556225661415
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone8 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone8 is 0.0277992277992278
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone9 is 22378.69544487539
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone9 is 11411.14585383095
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone9 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone9 is 0.02369668246445497
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone10 is 4538.9730659065335
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone10 is 1673.9860012786392
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone10 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone10 is 0.004138667299789482
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The volume of cone11 is 184.3067690106012
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The surface area of cone11 is 197.35107946539623
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The cone base of cone11 is on the coordinates plane - false
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - For dissection height 2 the volume ratio for cone11 is 0.027799227799227798
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.repository.Repository - Cones were added to repository true
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 1 parameters ConeParameter[surfaceArea=114.86220996738552, volume=76.96902001294993] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 2 parameters ConeParameter[surfaceArea=6222.648060994566, volume=15586.48835201016] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 3 parameters ConeParameter[surfaceArea=197.35107946539623, volume=184.3067690106012] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 4 parameters ConeParameter[surfaceArea=90604.92450379752, volume=135716.80263507908] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 5 parameters ConeParameter[surfaceArea=1147.52661739235, volume=2111.150263212341] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 6 parameters ConeParameter[surfaceArea=10763.203099836981, volume=36861.35380212024] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 7 parameters ConeParameter[surfaceArea=513.2041003987907, volume=636.6961111275314] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 8 parameters ConeParameter[surfaceArea=231.63556225661415, volume=233.26325452904211] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 9 parameters ConeParameter[surfaceArea=11411.14585383095, volume=22378.69544487539] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 10 parameters ConeParameter[surfaceArea=1673.9860012786392, volume=4538.9730659065335] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 11 parameters ConeParameter[surfaceArea=197.35107946539623, volume=184.3067690106012] were added to warehouse
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The average surface area of cones is 11188.894378971327
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.main.Main - The average surface area of cones is 19864.455044263133
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.repository.Repository - Query AboveAverageAreaSpecification result is : [
+Cone{coneId=4, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=10.0}, radius=120.0}, 
+Cone{coneId=9, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=42.2}]
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.repository.Repository - Query AboveXYPlaneSpecification result is : [
+Cone{coneId=4, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=10.0}, radius=120.0}, 
+Cone{coneId=5, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=15.0}, radius=12.0}, 
+Cone{coneId=7, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}]
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.repository.Repository - Query FirstQuarterSpecification result is : [
+Cone{coneId=3, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}]
+2021-10-25 02:36:58 [main] INFO  by.epam.task2.repository.Repository - Query HeightSpecification result is : [
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=3, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=5, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=15.0}, radius=12.0}, 
+Cone{coneId=8, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=8.0}, radius=4.5}, 
+Cone{coneId=9, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=42.2}, 
+Cone{coneId=11, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=4.0}]
