@@ -14,4 +14,6 @@ public interface ConeCalculation {
 
     double averageSurfaceArea();
 
+    double averageVolume();
+
 }
