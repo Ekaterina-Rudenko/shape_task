@@ -8,7 +8,7 @@ import by.epam.task2.service.ConeCalculation;
 import by.epam.task2.service.impl.ConeCalculationImpl;
 import by.epam.task2.validator.ConeValidator;
 import by.epam.task2.validator.impl.ConeValidatorImpl;
-import by.epam.task2.warehouse.ConeParameter;
+import by.epam.task2.entity.ConeParameter;
 import by.epam.task2.warehouse.Warehouse;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
