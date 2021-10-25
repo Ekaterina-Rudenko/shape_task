@@ -1,5 +1,6 @@
 package by.epam.task2.warehouse;
 
+import by.epam.task2.entity.Cone;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,20 +28,17 @@ public class Warehouse {
         return coneMap.get(coneId);
     }
 
+    public ConeParameter getConeParameter(Cone cone) {
+        return coneMap.get(cone);
+    }
+
     public void putParameter(long coneId, ConeParameter value) {
         coneMap.put(coneId, value);
-        logger.log(Level.INFO, "Cone " + coneId + " with parameters " + value + " was added");
+        logger.log(Level.INFO, "Cone " + coneId + " parameters " + value + " were added to warehouse");
     }
 
     public void removeParameter(long coneId) {
         coneMap.remove(coneId);
-        logger.log(Level.INFO, " Cone " + coneId + " was removed");
-    }
-
-    public void putParameter(long coneId, double surfaceArea, double volume) {
-        ConeParameter coneParameter = new ConeParameter();
-        coneParameter.setSurfaceArea(surfaceArea);
-        coneParameter.setVolume(volume);
-        coneMap.put(coneId, coneParameter);
+        logger.log(Level.INFO, " Cone " + coneId + " was removed from warehouse");
     }
 }
