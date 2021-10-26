@@ -16,11 +16,10 @@ import java.util.List;
 
 public class ConeFactoryImpl implements ConeFactory {
     static Logger logger = LogManager.getLogger();
-    ConeValidator validator = ConeValidatorImpl.getInstance();
-    PointFactoryImpl pointFactoryImpl = new PointFactoryImpl();
 
     @Override
     public List<Cone> createConeList(List<double[]> coneParameter) throws CustomException {
+        ConeValidator validator = ConeValidatorImpl.getInstance();
         List<Cone> coneList = new ArrayList<>();
         for (double[] array : coneParameter) {
             if (validator.isCone(array)) {
@@ -33,6 +32,8 @@ public class ConeFactoryImpl implements ConeFactory {
 
     @Override
     public Cone createCone(double[] coordinatesDouble) throws CustomException {
+        ConeValidator validator = ConeValidatorImpl.getInstance();
+        PointFactoryImpl pointFactoryImpl = new PointFactoryImpl();
         if (!validator.isCone(coordinatesDouble)) {
             logger.log(Level.ERROR, "The parameters " + Arrays.toString(coordinatesDouble) + " for creating a cone are incorrect ");
             throw new CustomException("The parameters " + Arrays.toString(coordinatesDouble) + " for creating a cone are incorrect ");
@@ -51,6 +52,7 @@ public class ConeFactoryImpl implements ConeFactory {
 
     @Override
     public Cone createCone(Point centre, Point apex, double radius) throws CustomException {
+        ConeValidator validator = ConeValidatorImpl.getInstance();
         if (!validator.isCone(centre, apex, radius)) {
             logger.log(Level.ERROR, "The parameters " + centre + ", " + apex + ", " + radius + " for creating a cone are incorrect ");
             throw new CustomException("The parameters " + centre + ", " + apex + ", " + radius + " for creating a cone are incorrect ");
@@ -60,6 +62,8 @@ public class ConeFactoryImpl implements ConeFactory {
 
     @Override
     public Cone createCone(double centreX, double centreY, double centreZ, double apexX, double apexY, double apexZ, double radius) throws CustomException {
+        ConeValidator validator = ConeValidatorImpl.getInstance();
+        PointFactoryImpl pointFactoryImpl = new PointFactoryImpl();
         if (!validator.isCone(centreX, centreY, centreZ, apexX, apexY, apexZ, radius)) {
             logger.log(Level.ERROR, "The parameters for creating a cone are incorrect ");
             throw new CustomException("The parameters for creating a cone are incorrect ");
