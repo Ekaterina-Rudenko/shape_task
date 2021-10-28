@@ -42,7 +42,7 @@ public class SurfaceAreaComparatorTest {
     @Test(dataProvider = "conesToCompare")
     public void centreXComparatorTest(List<Cone> cone, List<Integer> expected) {
         int actual = comparator.compare(cone.get(0), cone.get(2));
-        Assert.assertEquals(actual, (int) expected.get(2));
+        Assert.assertEquals(actual, (int) expected.get(1));
     }
     @Test(dataProvider = "conesToCompare")
     public void centreXComparatorDifferentTest(List<Cone> cone, List<Integer> expected) {
