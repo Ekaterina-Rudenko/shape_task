@@ -40,7 +40,7 @@ public class ConeCalculationTest {
     }
 
     @Test(dataProvider = "dataForCalculation")
-    public void findSurfaceAreaTest(List<Cone> cones, List<Double> expected) {
+    public void findSurfaceAreaTest(List<Cone> cones, List<Double> expected) throws CustomException {
         List<Double> actual = new ArrayList<>();
         for (Cone cone : cones) {
             double area = calculation.findSurfaceArea(cone);
@@ -51,7 +51,7 @@ public class ConeCalculationTest {
     }
 
     @Test(dataProvider = "dataForCalculation")
-    public void findVolumeTest(List<Cone> cones, List<Double> expected) {
+    public void findVolumeTest(List<Cone> cones, List<Double> expected) throws CustomException {
         List<Double> actual = new ArrayList<>();
         for (Cone cone : cones) {
             double area = calculation.findVolume(cone);
@@ -71,7 +71,7 @@ public class ConeCalculationTest {
         List<Boolean> expected = new ArrayList<>();
         expected.add(true);
         expected.add(false);
-        expected.add(false);
+        expected.add(true);
         Assert.assertEquals(actual, expected);
     }
 
