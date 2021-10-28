@@ -11,7 +11,7 @@ public class AboveAverageAreaSpecification implements Specification {
     public boolean specify(Cone cone){
         Warehouse warehouse = Warehouse.getInstance();
         ConeCalculation calculation = new ConeCalculationImpl();
-        double averageSurfaceArea = calculation.averageSurfaceArea();
+        double averageSurfaceArea = calculation.averageSurfaceArea().getAsDouble();
         double surfaceArea = warehouse.getCone(cone.getConeId()).getSurfaceArea();
         return (surfaceArea > averageSurfaceArea);
     }
