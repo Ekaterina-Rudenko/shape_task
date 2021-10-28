@@ -27,6 +27,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class Main {
     static Logger logger = LogManager.getLogger();
@@ -65,9 +66,9 @@ public class Main {
         }
         repository.addAll(coneList);
         filler.fillWarehouse(coneList);
-        double averageArea = calculation.averageSurfaceArea();
+        OptionalDouble averageArea = calculation.averageSurfaceArea();
         logger.log(Level.INFO, "The average surface area of cones is " + averageArea);
-        double averageVolume = calculation.averageVolume();
+        OptionalDouble averageVolume = calculation.averageVolume();
         logger.log(Level.INFO, "The average surface area of cones is " + averageVolume);
 
         repository.query(aboveAverage);
@@ -81,7 +82,7 @@ public class Main {
         repository.sortCone(new HeightComparator());
         repository.sortCone(new VolumeComparator());
 
-        Optional<Cone> coneOptional = repository.get(1);
+        Optional<Cone> coneOptional = repository.get(-105);
         Cone coneToChange = null;
         if (coneOptional.isPresent()) {
             coneToChange = coneOptional.get();
