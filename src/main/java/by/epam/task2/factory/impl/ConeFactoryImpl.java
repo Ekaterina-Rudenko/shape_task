@@ -19,6 +19,10 @@ public class ConeFactoryImpl implements ConeFactory {
 
     @Override
     public List<Cone> createConeList(List<double[]> coneParameter) throws CustomException {
+        if(coneParameter == null || coneParameter.isEmpty()){
+            logger.log(Level.INFO, "The list of parameters is empty, cone can't be created");
+            throw new CustomException("The list of parameters is empty, cone can't be created");
+        }
         ConeValidator validator = ConeValidatorImpl.getInstance();
         List<Cone> coneList = new ArrayList<>();
         for (double[] array : coneParameter) {
