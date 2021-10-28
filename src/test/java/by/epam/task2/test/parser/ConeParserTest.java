@@ -1,6 +1,5 @@
 package by.epam.task2.test.parser;
 
-import by.epam.task2.exception.CustomException;
 import by.epam.task2.parser.ConeParser;
 import by.epam.task2.parser.impl.ConeParserImpl;
 import org.testng.Assert;
@@ -39,30 +38,15 @@ public class ConeParserTest {
     }
 
     @Test(dataProvider = "dataForParsing")
-    public void parseParameterToListTest(List<String> parameter, List<double[]> expected) throws CustomException {
+    public void parseParameterToListTest(List<String> parameter, List<double[]> expected) {
         List<double[]> actual = parser.parseParameterToList(parameter);
         Assert.assertEquals(actual.toArray(), expected.toArray());
     }
 
-    @Test(dataProvider = "dataForParsing")
-    public void parseParameterToArrayTest(List<String> parameter, List<double[]> expected) throws CustomException {
-        double[] actual = parser.parseParameter(parameter.get(0));
-        Assert.assertEquals(actual, expected.get(0));
-    }
-
-    @Test(dataProvider = "dataForParsing", expectedExceptions = CustomException.class)
-    public void parseParameterToArrayExceptionTest(List<String> parameter, List<double[]> result) throws CustomException {
-        double[] actual = parser.parseParameter(parameter.get(2));
-    }
-
-    @Test(expectedExceptions = CustomException.class)
-    public void parseParameterToArrayNegativeTest() throws CustomException {
-        String invalidLine = "1er, 2, 3, 4, 5, 6, 7";
-        double[] actual = parser.parseParameter(invalidLine);
-    }
-
-    @Test(expectedExceptions = CustomException.class)
-    public void parseParameterToListExceptionTest() throws CustomException {
+    @Test
+    public void parseParameterToListExceptionTest() {
         List<double[]> actual = parser.parseParameterToList(null);
+        List<double[]> expected = new ArrayList<>();
+        Assert.assertEquals(actual, expected);
     }
 }
