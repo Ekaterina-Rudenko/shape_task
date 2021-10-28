@@ -12,13 +12,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+import java.util.OptionalDouble;
 
 
 public class ConeCalculationImpl implements ConeCalculation {
     static Logger logger = LogManager.getLogger();
 
     @Override
-    public double findSurfaceArea(Cone cone) {
+    public double findSurfaceArea(Cone cone) throws CustomException {
+        if(cone == null){
+            logger.log(Level.ERROR, "The cone is null, surface area can't be found");
+            throw new CustomException("The cone is null, surface area can't be found");
+        }
         double radius = cone.getRadius();
         double height = findHeight(cone);
         double slantHeight = Math.hypot(cone.getRadius(), height);
@@ -27,7 +32,11 @@ public class ConeCalculationImpl implements ConeCalculation {
     }
 
     @Override
-    public double findVolume(Cone cone) {
+    public double findVolume(Cone cone) throws CustomException {
+        if(cone == null){
+            logger.log(Level.ERROR, "The cone is null, volume can't be found");
+            throw new CustomException("The cone is null, volume can't be found");
+        }
         double radius = cone.getRadius();
         double height = findHeight(cone);
         double volume = coneVolume(radius, height);
@@ -36,6 +45,10 @@ public class ConeCalculationImpl implements ConeCalculation {
 
     @Override
     public double dissectionVolumeRatio(Cone cone, double dissectionHeight) throws CustomException {
+        if(cone == null){
+            logger.log(Level.ERROR, "The cone is null, volume ratio can't be found");
+            throw new CustomException("The cone is null, volume ratio can't be found");
+        }
         ConeValidator validator = ConeValidatorImpl.getInstance();
         if (!validator.checkDissectionHeight(cone, dissectionHeight)) {
             logger.log(Level.ERROR, "The dissection height " + dissectionHeight + " is beyond cone height for cone " + cone.getConeId() + ", the ratio can't be calculated fot this height");
@@ -52,31 +65,36 @@ public class ConeCalculationImpl implements ConeCalculation {
 
     @Override
     public boolean isBaseOnPlane(Cone cone) {
-        boolean onPlane = (cone.getCentrePoint().getX() == 0 && cone.getCentrePoint().getY() == 0);
+        boolean onPlane = (cone.getCentrePoint().getZ() == 0);
         return onPlane;
     }
 
     @Override
-    public double averageSurfaceArea() {
+    public OptionalDouble averageSurfaceArea() {
         Repository repository = Repository.getInstance();
         Warehouse warehouse = Warehouse.getInstance();
+        OptionalDouble averageArea = OptionalDouble.empty();
         double totalSurface = 0;
         List<Cone> cones = repository.getCones();
+        if (!cones.isEmpty()){
         for (Cone c : cones) {
             totalSurface += warehouse.getCone(c.getConeId()).getSurfaceArea();
-        }
-        double averageArea = totalSurface / cones.size();
+            averageArea = OptionalDouble.of(totalSurface / cones.size());
+        }}
         return averageArea;
     }
-    public double averageVolume() {
+    @Override
+    public OptionalDouble averageVolume() {
         Repository repository = Repository.getInstance();
         Warehouse warehouse = Warehouse.getInstance();
+        OptionalDouble averageVolume = OptionalDouble.empty();
         double totalVolume = 0;
         List<Cone> cones = repository.getCones();
+        if(!cones.isEmpty()){
         for (Cone c : cones) {
             totalVolume += warehouse.getCone(c.getConeId()).getVolume();
-        }
-        double averageVolume = totalVolume / cones.size();
+            averageVolume = OptionalDouble.of(totalVolume / cones.size());
+        }}
         return averageVolume;
     }
 
