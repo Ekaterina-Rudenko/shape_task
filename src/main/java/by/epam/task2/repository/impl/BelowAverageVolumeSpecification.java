@@ -11,7 +11,7 @@ public class BelowAverageVolumeSpecification implements Specification {
     public boolean specify(Cone cone){
         Warehouse warehouse = Warehouse.getInstance();
         ConeCalculation calculation = new ConeCalculationImpl();
-        double averageVolume = calculation.averageVolume();
+        double averageVolume = calculation.averageVolume().getAsDouble();
         double volume = warehouse.getCone(cone.getConeId()).getVolume();
         return (volume < averageVolume);
     }
