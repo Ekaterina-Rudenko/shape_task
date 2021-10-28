@@ -1,0 +1,101 @@
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 2 parameters ConeParameter[surfaceArea=6222.648060994566, volume=15586.48835201016] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 3 parameters ConeParameter[surfaceArea=1004.1169189451398, volume=950.5831051231996] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 4 parameters ConeParameter[surfaceArea=197.35107946539623, volume=184.3067690106012] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 5 parameters ConeParameter[surfaceArea=1299.5715138174553, volume=2865.132500073891] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 6 parameters ConeParameter[surfaceArea=1463.962663386795, volume=3619.1147369354417] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 7 parameters ConeParameter[surfaceArea=3124.762356009383, volume=9215.33845053006] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 8 parameters ConeParameter[surfaceArea=513.2041003987907, volume=636.6961111275314] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 9 parameters ConeParameter[surfaceArea=506.4627363663176, volume=657.3782627636642] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 10 parameters ConeParameter[surfaceArea=1462.8443583253118, volume=2533.882970679383] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 11 parameters ConeParameter[surfaceArea=1673.9860012786392, volume=4538.9730659065335] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.warehouse.Warehouse - Cone 12 parameters ConeParameter[surfaceArea=10239.699181486818, volume=18430.67690106012] were added to warehouse
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.main.Main - The average surface area of cones is OptionalDouble[2318.6225983701665]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.main.Main - The average surface area of cones is OptionalDouble[4941.295020436127]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Query AboveAverageAreaSpecification result is : [
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=7, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=20.0}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Query AboveXYPlaneSpecification result is : [
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Query FirstQuarterSpecification result is : [
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Query HeightSpecification result is : [
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Query BelowAverageVolumeSpecification result is : [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=9, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=28.0}, radius=4.5}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=11, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Sorted with comparator ConeIdComparator : [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=7, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=20.0}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=9, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=28.0}, radius=4.5}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=11, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Sorted with comparator RadiusComparator : [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=9, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=28.0}, radius=4.5}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=11, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}, 
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=7, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=20.0}, 
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Sorted with comparator HeightComparator : [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=7, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=20.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=11, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}, 
+Cone{coneId=9, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=28.0}, radius=4.5}]
+2021-10-28 18:58:26 [main] INFO  by.epam.task2.repository.Repository - 
+Sorted with comparator VolumeComparator : [
+Cone{coneId=1, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=6.0}, radius=3.5}, 
+Cone{coneId=4, centerPoint=Point{x=11.0, y=12.0, z=-5.0}, apexPoint=Point{x=11.0, y=12.0, z=6.0}, radius=4.0}, 
+Cone{coneId=8, centerPoint=Point{x=2.0, y=2.0, z=0.5}, apexPoint=Point{x=2.0, y=2.0, z=10.0}, radius=8.0}, 
+Cone{coneId=9, centerPoint=Point{x=12.0, y=2.0, z=-3.0}, apexPoint=Point{x=12.0, y=2.0, z=28.0}, radius=4.5}, 
+Cone{coneId=3, centerPoint=Point{x=0.0, y=0.0, z=1.0}, apexPoint=Point{x=0.0, y=0.0, z=7.0}, radius=12.3}, 
+Cone{coneId=10, centerPoint=Point{x=10.0, y=21.0, z=0.0}, apexPoint=Point{x=10.0, y=21.0, z=12.0}, radius=14.2}, 
+Cone{coneId=5, centerPoint=Point{x=-4.0, y=-4.0, z=1.0}, apexPoint=Point{x=-4.0, y=-4.0, z=20.0}, radius=12.0}, 
+Cone{coneId=6, centerPoint=Point{x=10.0, y=20.0, z=1.0}, apexPoint=Point{x=10.0, y=20.0, z=25.0}, radius=12.0}, 
+Cone{coneId=11, centerPoint=Point{x=15.0, y=2.0, z=-10.0}, apexPoint=Point{x=15.0, y=2.0, z=20.1}, radius=12.0}, 
+Cone{coneId=7, centerPoint=Point{x=3.1, y=3.1, z=-15.0}, apexPoint=Point{x=3.1, y=3.1, z=7.0}, radius=20.0}, 
+Cone{coneId=2, centerPoint=Point{x=1.0, y=2.0, z=0.0}, apexPoint=Point{x=1.0, y=2.0, z=16.0}, radius=30.5}, 
+Cone{coneId=12, centerPoint=Point{x=0.2, y=2.0, z=-1.0}, apexPoint=Point{x=0.2, y=2.0, z=10.0}, radius=40.0}]
