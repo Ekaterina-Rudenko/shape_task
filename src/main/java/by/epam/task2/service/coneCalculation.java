@@ -3,17 +3,19 @@ package by.epam.task2.service;
 import by.epam.task2.entity.Cone;
 import by.epam.task2.exception.CustomException;
 
-public interface ConeCalculation {
-    double findSurfaceArea(Cone cone);
+import java.util.OptionalDouble;
 
-    double findVolume(Cone cone);
+public interface ConeCalculation {
+    double findSurfaceArea(Cone cone) throws CustomException;
+
+    double findVolume(Cone cone) throws CustomException;
 
     double dissectionVolumeRatio(Cone cone, double dissectionHeight) throws CustomException;
 
     boolean isBaseOnPlane(Cone cone);
 
-    double averageSurfaceArea();
+    OptionalDouble averageSurfaceArea();
 
-    double averageVolume();
+    OptionalDouble averageVolume();
 
 }
