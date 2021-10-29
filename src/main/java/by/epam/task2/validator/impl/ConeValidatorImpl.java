@@ -2,6 +2,7 @@ package by.epam.task2.validator.impl;
 
 import by.epam.task2.entity.Cone;
 import by.epam.task2.entity.Point;
+import by.epam.task2.util.ConeConstant;
 import by.epam.task2.validator.ConeValidator;
 
 public class ConeValidatorImpl implements ConeValidator {
@@ -19,13 +20,13 @@ public class ConeValidatorImpl implements ConeValidator {
 
     @Override
     public boolean isCone(double... parameter) {
-        boolean isValidSize = (parameter.length == NUMBER_OF_CONE_PARAMETERS);
+        boolean isValidSize = (parameter.length == ConeConstant.NUMBER_OF_CONE_PARAMETERS);
         boolean isValidParameter = false;
         if(isValidSize){
-        isValidParameter = (Double.compare(parameter[INDEX_CENTRE_X], parameter[INDEX_APEX_X]) == 0
-                && Double.compare(parameter[INDEX_CENTRE_Y], parameter[INDEX_APEX_Y]) == 0
-                && Double.compare(parameter[INDEX_CENTRE_Z], parameter[INDEX_APEX_Z]) != 0
-                && parameter[INDEX_RADIUS] > 0);}
+        isValidParameter = (Double.compare(parameter[ConeConstant.INDEX_CENTRE_X], parameter[ConeConstant.INDEX_APEX_X]) == 0
+                && Double.compare(parameter[ConeConstant.INDEX_CENTRE_Y], parameter[ConeConstant.INDEX_APEX_Y]) == 0
+                && Double.compare(parameter[ConeConstant.INDEX_CENTRE_Z], parameter[ConeConstant.INDEX_APEX_Z]) != 0
+                && parameter[ConeConstant.INDEX_RADIUS] > 0);}
         return (isValidSize && isValidParameter);
     }
 
