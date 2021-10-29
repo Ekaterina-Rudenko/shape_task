@@ -1,7 +1,7 @@
 package by.epam.task2.entity;
 
 import by.epam.task2.exception.CustomException;
-import by.epam.task2.generator.IdGenerator;
+import by.epam.task2.util.IdGenerator;
 import by.epam.task2.observer.ConeEvent;
 import by.epam.task2.observer.ConeObserver;
 import by.epam.task2.observer.Observable;
@@ -72,7 +72,6 @@ public class Cone implements Observable {
         this.radius = radius;
         notifyObservers();
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -83,15 +82,30 @@ public class Cone implements Observable {
         }
         Cone cone = (Cone) o;
         return Double.compare(cone.radius, radius) == 0
-                && centrePoint.equals(cone.centrePoint)
-                && apexPoint.equals(cone.apexPoint);
+                && cone.coneId == coneId
+                && centrePoint != null ? centrePoint.equals(cone.centrePoint) : cone.centrePoint == null
+                && apexPoint != null ? apexPoint.equals(cone.apexPoint) : cone.apexPoint == null;
+    }
+
+    public boolean equalsIgnoreId(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Cone cone = (Cone) o;
+        return Double.compare(cone.radius, radius) == 0
+                && centrePoint != null ? centrePoint.equals(cone.centrePoint) : cone.centrePoint == null
+                && apexPoint != null ? apexPoint.equals(cone.apexPoint) : cone.apexPoint == null;
     }
 
     @Override
     public int hashCode() {
         int prime = 13;
-        int result = centrePoint != null ? centrePoint.hashCode() : 0;
-        result = prime * result + apexPoint.hashCode();
+        int result = 1;
+        result = prime * result + (centrePoint != null ? centrePoint.hashCode() : 0);
+        result = prime * result + (centrePoint != null ? apexPoint.hashCode() : 0);
         result = prime * result + Double.hashCode(radius);
         return result;
     }
