@@ -39,19 +39,29 @@ public class ConeFactoryTest {
     }
 
     @Test(dataProvider = "dataForFactory")
-    public void createConeTest(List<double[]> parameterList, List<Cone> expected) throws CustomException {
-        List<Cone> actual = coneFactory.createConeList(parameterList);
+    public void createConeTest(List<double[]> parameterList, List<Cone> expectedConeList) throws CustomException {
+        List<Cone> coneList = coneFactory.createConeList(parameterList);
+        List<Boolean> actual = new ArrayList<>();
+        int index = 0;
+        for (Cone cone : coneList) {
+            boolean result = cone.equalsIgnoreId(expectedConeList.get(index));
+            index++;
+            actual.add(result);
+        }
+        List<Boolean> expected = List.of(true, true, true, true);
         Assert.assertEquals(actual, expected);
     }
+
     @Test
     public void createConeFromDoublesTest() throws CustomException {
-        Cone actual = coneFactory.createCone(1, 1,2,1,1,5,10);
-        Cone expected = new Cone(new Point(1,1,2), new Point(1,1,5), 10);
-        Assert.assertEquals(actual, expected);
+        Cone actual = coneFactory.createCone(1, 1, 2, 1, 1, 5, 10);
+        Cone expected = new Cone(new Point(1, 1, 2), new Point(1, 1, 5), 10);
+        Assert.assertTrue(actual.equalsIgnoreId(expected));
     }
+
     @Test(expectedExceptions = CustomException.class)
     public void createConeExceptionTest() throws CustomException {
-        Cone actual = coneFactory.createCone(1,2,10,-5,3,20,8);
+        Cone actual = coneFactory.createCone(1, 2, 10, -5, 3, 20, 8);
     }
 
 }
