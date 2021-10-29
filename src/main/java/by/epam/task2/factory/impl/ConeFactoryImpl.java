@@ -4,6 +4,7 @@ import by.epam.task2.entity.Cone;
 import by.epam.task2.entity.Point;
 import by.epam.task2.exception.CustomException;
 import by.epam.task2.factory.ConeFactory;
+import by.epam.task2.util.ConeConstant;
 import by.epam.task2.validator.ConeValidator;
 import by.epam.task2.validator.impl.ConeValidatorImpl;
 import org.apache.logging.log4j.Level;
@@ -42,15 +43,15 @@ public class ConeFactoryImpl implements ConeFactory {
             logger.log(Level.ERROR, "The parameters " + Arrays.toString(coordinatesDouble) + " for creating a cone are incorrect ");
             throw new CustomException("The parameters " + Arrays.toString(coordinatesDouble) + " for creating a cone are incorrect ");
         }
-        Point centre = pointFactoryImpl.createPoint(coordinatesDouble[ConeValidatorImpl.INDEX_CENTRE_X],
-                coordinatesDouble[ConeValidatorImpl.INDEX_CENTRE_Y],
-                coordinatesDouble[ConeValidatorImpl.INDEX_CENTRE_Z]
+        Point centre = pointFactoryImpl.createPoint(coordinatesDouble[ConeConstant.INDEX_CENTRE_X],
+                coordinatesDouble[ConeConstant.INDEX_CENTRE_Y],
+                coordinatesDouble[ConeConstant.INDEX_CENTRE_Z]
         );
-        Point apex = pointFactoryImpl.createPoint(coordinatesDouble[ConeValidator.INDEX_APEX_X],
-                coordinatesDouble[ConeValidator.INDEX_APEX_Y],
-                coordinatesDouble[ConeValidator.INDEX_APEX_Z]
+        Point apex = pointFactoryImpl.createPoint(coordinatesDouble[ConeConstant.INDEX_APEX_X],
+                coordinatesDouble[ConeConstant.INDEX_APEX_Y],
+                coordinatesDouble[ConeConstant.INDEX_APEX_Z]
         );
-        double radius = coordinatesDouble[ConeValidator.INDEX_RADIUS];
+        double radius = coordinatesDouble[ConeConstant.INDEX_RADIUS];
         return new Cone(centre, apex, radius);
     }
 
