@@ -82,7 +82,7 @@ public class Main {
         repository.sortCone(new HeightComparator());
         repository.sortCone(new VolumeComparator());
 
-        Optional<Cone> coneOptional = repository.get(-105);
+        Optional<Cone> coneOptional = repository.get(2);
         Cone coneToChange = null;
         if (coneOptional.isPresent()) {
             coneToChange = coneOptional.get();
