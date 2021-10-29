@@ -3,6 +3,8 @@ package by.epam.task2.validator.impl;
 import by.epam.task2.validator.ConeStringValidator;
 
 public class ConeStringValidatorImpl implements ConeStringValidator {
+    static final String VALID_CONE_STRING = "([+-]?\\d+((\\.\\d+)|\\.)?\\s+){6}[+]?\\d+((\\.\\d+)|\\.)?(\\s+)?";
+
     private static ConeStringValidatorImpl instance;
 
     private ConeStringValidatorImpl() {
