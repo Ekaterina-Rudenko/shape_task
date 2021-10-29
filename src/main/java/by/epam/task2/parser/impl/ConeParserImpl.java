@@ -15,6 +15,7 @@ import java.util.stream.Stream;
 
 public class ConeParserImpl implements ConeParser {
     static Logger logger = LogManager.getLogger();
+    static final String DELIMITER_SPACE = "\\s+";
 
     @Override
     public List<double[]> parseParameterToList(List<String> parameterLineList) {
