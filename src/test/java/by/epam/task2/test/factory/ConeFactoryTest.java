@@ -42,6 +42,7 @@ public class ConeFactoryTest {
     public void createConeTest(List<double[]> parameterList, List<Cone> expectedConeList) throws CustomException {
         List<Cone> coneList = coneFactory.createConeList(parameterList);
         List<Boolean> actual = new ArrayList<>();
+        
         int index = 0;
         for (Cone cone : coneList) {
             boolean result = cone.equalsIgnoreId(expectedConeList.get(index));
